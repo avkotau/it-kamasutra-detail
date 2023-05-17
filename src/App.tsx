@@ -1,26 +1,21 @@
 import React from 'react';
 import logo from './logo.svg';
 import './App.css';
+import According from "./components/Accordiong/According";
+import Rating from "./Rating";
+import OnOff from "./components/OnOff/OnOff";
+import UncontrolledAccordiong from '../src/components/UncontrolledAccordiong/UncontrolledAccordiong'
 
 function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.tsx</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+    return (
+        //className="App"
+        <div className="App">
+            {/*<According titleValue={'Menu'} collapsed={false}/>*/}
+            {/*<UncontrolledAccordiong titleValue={'Users'} collapsed={false}/>*/}
+            {/*<Rating />*/}
+            <OnOff/>
+        </div>
+    );
 }
 
 export default App;
