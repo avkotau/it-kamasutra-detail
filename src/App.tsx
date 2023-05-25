@@ -10,9 +10,9 @@ function App() {
     return (
         //className="App"
         <div className="App">
-            {/*<According titleValue={'Menu'} collapsed={false}/>*/}
+            <According titleValue={'Menu'} collapsed={false}/>
             {/*<UncontrolledAccordiong titleValue={'Users'} collapsed={false}/>*/}
-            {/*<Rating />*/}
+            <Rating />
             <OnOff/>
         </div>
     );

@@ -3,7 +3,7 @@ import s from './SquareOnOff.module.css'
 
 type SquareOnOffType = {
     // value: boolean
-    onClickHandle: () => void
+    onClickHandle?: () => void
     clickButton: boolean
 }
 

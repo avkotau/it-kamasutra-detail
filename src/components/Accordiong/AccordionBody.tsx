@@ -1,12 +1,18 @@
 import React from 'react';
 
-const AccordionBody = () => {
+export type ValuePropsType = {
+    value: string[]
+}
+
+const AccordionBody: React.FC<ValuePropsType> = ({
+                                                     value
+                                                 }) => {
+
     return (
         <ul>
-            <li>1</li>
-            <li>2</li>
-            <li>3</li>
-            <li>4</li>
+            {
+                value.map((i, index) => <li key={index}>{i}</li>)
+            }
         </ul>
     );
 };
