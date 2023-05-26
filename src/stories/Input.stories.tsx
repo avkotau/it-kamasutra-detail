@@ -1,4 +1,5 @@
 import React, { ChangeEvent, useRef, useState } from "react";
+import { action } from "@storybook/addon-actions";
 
 export default {
     title: 'input',
@@ -31,11 +32,8 @@ export const GetValueOfUnControlledInputByButtonPress = () => {
         setValue(el.value)
     }
     return <>
-        <input ref={inputRef}/>
-        <button onClick={valueInputHandle}
-
-        >press
-        </button>
+        <input ref={inputRef} onChange={action('hello')}/>
+        <button onClick={valueInputHandle}>press</button>
         {value}
     </>
 
