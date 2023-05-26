@@ -1,17 +1,22 @@
-import React from 'react';
+import React, { MouseEventHandler } from 'react';
+import { UsersType } from "./According";
 
 export type ValuePropsType = {
-    value: string[]
+    value: UsersType[]
+    handleClickUser: (userId: string, title: string) => void
 }
 
-const AccordionBody: React.FC<ValuePropsType> = ({
-                                                     value
-                                                 }) => {
+const AccordionBody: React.FC<ValuePropsType> = (
+    {
+        value,
+        handleClickUser
+    }
+) => {
 
     return (
         <ul>
             {
-                value.map((i, index) => <li key={index}>{i}</li>)
+                value.map((i, index) => <li key={index} onClick={() => handleClickUser(i.id, i.title)}>{i.title}</li>)
             }
         </ul>
     );

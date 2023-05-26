@@ -4,21 +4,19 @@ import SquareOnOff from '../SquareOnOff/SquareOnOff';
 
 export default {
     title: 'SquareOnOff',
-    component: SquareOnOff,
 };
 
-const SquareOnStory = () => {
+export const SquareOnStory = () => {
 
     return <SquareOnOff clickButton={true} />;
 };
 
-const SquareOffStory = () => {
+export const SquareOffStory = () => {
 
     return <SquareOnOff  clickButton={false} />;
 };
 
-
-const SquareOnOffStory = () => {
+export const SquareOnOffStory = () => {
     const [clickButton, setClickButton] = useState(true);
 
     const onClickHandle = () => {
@@ -28,6 +26,3 @@ const SquareOnOffStory = () => {
     return <SquareOnOff onClickHandle={onClickHandle} clickButton={clickButton} />;
 };
 
-export const SquareOn = () => <SquareOnStory />;
-export const SquareOff = () => <SquareOffStory />;
-export const SquareForTest = () => <SquareOnOffStory />;

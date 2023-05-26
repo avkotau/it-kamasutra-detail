@@ -10,12 +10,12 @@ export const InputFoo = () => {
     }
 
     return (
-        <>
+        <div>
             <input
                 value={value} onChange={onchangeInput}
             />
             {value}
-        </>)
+        </div>)
 }
 
 export const InputCheckboxFoo = () => {
@@ -27,19 +27,19 @@ export const InputCheckboxFoo = () => {
     }
 
     return (
-        <>
+        <div>
             <input
                 type={'checkbox'}
                 checked={value} onChange={onchangeInput}
             />
             {value}
-        </>)
+        </div>)
 }
 
 
 export const SelectFoo = () => {
 
-    const [value, setValue] = useState('1');
+    const [value, setValue] = useState('0');
 
     const onchangeSelect = (e: ChangeEvent<HTMLSelectElement>) => {
         setValue(e.currentTarget.value)
