@@ -8,7 +8,7 @@ type AccordingPropsType = {
 }
 
 const UncontrolledAccordiong: FC<AccordingPropsType> = (props) => {
-    console.log(props)
+
     const [trueCollapse, setTrueCollapse] = useState(false);
 
     const onClickHandle = () => {

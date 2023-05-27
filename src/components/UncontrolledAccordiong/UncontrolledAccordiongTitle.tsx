@@ -8,7 +8,7 @@ type AccordingTitlePropsType = {
 }
 
 const UncontrolledAccordiongTitle: FC<AccordingTitlePropsType> = (props) => {
-    console.log(props)
+
     return (
         <div onClick={props.onClickHandle} >
             <h1>{props.title}</h1>

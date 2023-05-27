@@ -1,16 +1,21 @@
-import React, { FC } from 'react';
-import AccordionBody from "./AccordionBody";
+import React from 'react';
 
 type AccordingTitlePropsType = {
     value: string
+    toggleSelect?: () => void
 
 }
 
-const AccordingTitle: FC<AccordingTitlePropsType> = (props) => {
-    console.log(props)
+const AccordingTitle: React.FC<AccordingTitlePropsType> = (
+    {
+        value,
+        toggleSelect
+    }
+) => {
+
     return (
-        <div>
-            <h1>{props.value}</h1>
+        <div onClick={toggleSelect}>
+            <h1>{value}</h1>
         </div>
     );
 };

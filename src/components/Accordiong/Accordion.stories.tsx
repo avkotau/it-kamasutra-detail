@@ -1,14 +1,14 @@
 import AccordingTitle from "./AccordingTitle";
 import AccordionBody, { ValuePropsType } from "./AccordionBody"
 import React, { useState } from "react";
-import { handleClickUser, titleHeader, users, UsersType, ValueType } from "./According";
+import { handleClickUser, headerTitle, users, UsersType, ValueType } from "./According";
 
 export default {
     title: 'Accordion',
 }
 
 export const Title: React.FC<ValueType> = () => {
-    return <AccordingTitle value={titleHeader}/>
+    return <AccordingTitle value={headerTitle}/>
 }
 
 export const Users: React.FC<UsersType[]> = () => {
@@ -23,9 +23,9 @@ export const Accordion: React.FC<ValueType & UsersType[]> = () => {
     }
 
     return <>
-        <div onClick={toggleSelect}>
-            <AccordingTitle value={'Users'}/>
-        </div>
+
+        <AccordingTitle value={'Users'} toggleSelect={toggleSelect}/>
+
         {
             show &&
             <AccordionBody value={users} handleClickUser={handleClickUser}/>

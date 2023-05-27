@@ -10,7 +10,7 @@ const OnOff = () => {
         setClickButton(!clickButton)
     }
     return (
-        <div style={{width: '500px', height: '500px'}}>
+        <div style={{width: '300px', height: '250px'}}>
             <SquareOnOff onClickHandle={onClickHandle} clickButton={clickButton}/>
         </div>
     );

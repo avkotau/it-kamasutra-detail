@@ -1,4 +1,4 @@
-import React, { FC, useState } from 'react';
+import React, { useState } from 'react';
 import AccordionBody from "./AccordionBody";
 import AccordingTitle from "./AccordingTitle";
 
@@ -19,7 +19,7 @@ export const users: UsersType[] = [
     {title: 'Janna', id: '4'}
 ]
 
-export const titleHeader = 'Users'
+export const headerTitle = 'Users'
 
 export const handleClickUser = (userId: string, title: string) => {
     alert(`Will be happy ${title} with id ${userId}`)
@@ -27,22 +27,22 @@ export const handleClickUser = (userId: string, title: string) => {
 
 const According: React.FC<ValueType & UsersType[]> = () => {
 
-    const [collapsed, stateCollapsed] = useState<boolean>(false)
+    const [collapsed, stateCollapsed] = useState<boolean>(true)
 
     const toggleSelect = () => {
+        console.log(collapsed)
         stateCollapsed(!collapsed)
     }
-
+    console.log(collapsed)
     return (
         <>
-            <div onChange={toggleSelect}>
-                <AccordingTitle value={titleHeader}/>
-            </div>
+            <AccordingTitle value={headerTitle} toggleSelect={toggleSelect}/>
 
-            {collapsed && <AccordionBody
-                value={users}
-                handleClickUser={handleClickUser}
-            />}
+            {collapsed &&
+                <AccordionBody
+                    value={users}
+                    handleClickUser={handleClickUser}
+                />}
         </>
     );
 };
