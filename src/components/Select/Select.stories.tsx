@@ -18,7 +18,7 @@ export const SelectFoo = () => {
     }
 
     return (
-        <Box sx={{minWidth: 120}}>
+        <Box sx={{width: '40%'}}>
             <FormControl fullWidth>
                 <InputLabel id="demo-simple-select-label">Age</InputLabel>
                 <Select
