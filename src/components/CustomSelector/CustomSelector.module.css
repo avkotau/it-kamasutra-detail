@@ -2,25 +2,28 @@
 .selector {
     border: 1px solid black;
     display: grid;
-    width: 10%;
+    width: 10em;
 }
+
 .selector > span {
     padding: 10px;
 }
+
 .selector > div > * {
     padding: 10px;
 }
 
-/*.itemChanged {*/
-/*    background-color: #1ea7fd;*/
-/*    color: white;*/
-/*}*/
 .toggle {
     display: none;
 }
 
 .toggle.show {
     display: grid;
+}
+
+.itemSelected {
+    background-color: #1ea7fd;
+    color: white;
 }
 
 
