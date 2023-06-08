@@ -20,10 +20,8 @@ export const WithValue = () => {
     const [selectedValue, stateSelected] = useState('1');
 
     const onchange = (value: string) => {
-
         stateSelected(value)
     }
-
 
     return <>
         <CustomSelector

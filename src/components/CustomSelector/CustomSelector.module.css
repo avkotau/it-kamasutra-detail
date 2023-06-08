@@ -5,20 +5,8 @@
     width: 10em;
 }
 
-.selector > span {
+.selector > div > div {
     padding: 10px;
-}
-
-.selector > div > * {
-    padding: 10px;
-}
-
-.toggle {
-    display: none;
-}
-
-.toggle.show {
-    display: grid;
 }
 
 .itemSelected {
