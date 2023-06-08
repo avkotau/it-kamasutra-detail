@@ -1,7 +1,7 @@
 import React from 'react';
 import './App.css';
 import According from "./components/Accordiong/According";
-import Rating from "./Rating";
+import Rating from "./components/Rating/Rating";
 import OnOff from "./components/OnOff/OnOff";
 import SelectFoo from "./components/Select/Select";
 import { CustomSelector } from "./components/CustomSelector/CustomSelector";
